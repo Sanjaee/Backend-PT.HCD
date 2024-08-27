@@ -35,12 +35,12 @@ exports.getMarketingById = async (req, res) => {
 
 
 // Ambil Semua Marketing
-exports.getMarketings = async (req, res) => {
+exports.getMarketing = async (req, res) => {
   try {
-    const marketings = await prisma.marketing.findMany();
-    res.json(marketings);
+    const marketing = await prisma.marketing.findMany();
+    res.json(marketing);
   } catch (error) {
-    res.status(500).json({ error: "Error retrieving marketings" });
+    res.status(500).json({ error: "Error retrieving marketing" });
   }
 };
 
@@ -67,7 +67,7 @@ exports.deleteMarketing = async (req, res) => {
     await prisma.marketing.delete({
       where: { id: Number(id) },
     });
-    res.status(204).send();
+    res.json({ message: "Marketing deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Error deleting marketing" });
   }

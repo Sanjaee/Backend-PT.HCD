@@ -36,15 +36,15 @@ exports.createPenjualan = async (req, res) => {
   }
 };
 
-exports.getPenjualans = async (req, res) => {
+exports.getPenjualan = async (req, res) => {
   try {
-    const penjualans = await prisma.penjualan.findMany({
+    const penjualan = await prisma.penjualan.findMany({
       include: { marketing: true },
     });
-    res.json(penjualans);
+    res.json(penjualan);
   } catch (error) {
-    console.error('Error retrieving penjualans:', error);
-    res.status(500).json({ error: "Error retrieving penjualans" });
+    console.error('Error retrieving penjualan:', error);
+    res.status(500).json({ error: "Error retrieving penjualan" });
   }
 };
 

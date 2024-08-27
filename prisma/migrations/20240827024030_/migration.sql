@@ -23,7 +23,7 @@ CREATE TABLE "Penjualan" (
 CREATE TABLE "HasilPerhitungan" (
     "id" SERIAL NOT NULL,
     "marketing" TEXT NOT NULL,
-    "bulan" TIMESTAMP(3) NOT NULL,
+    "bulan" TEXT NOT NULL,
     "omzet" INTEGER NOT NULL,
     "komisi_persen" DOUBLE PRECISION NOT NULL,
     "komisi_nominal" INTEGER NOT NULL,

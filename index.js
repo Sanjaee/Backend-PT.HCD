@@ -9,8 +9,8 @@ const hasilPerhitunganRoutes = require("./src/routes/hasilPerhitunganRoutes");
 
 app.use(express.json());
 
-app.use("/api/marketings", marketingRoutes);
-app.use("/api/penjualans", penjualanRoutes);
+app.use("/api/marketing", marketingRoutes);
+app.use("/api/penjualan", penjualanRoutes);
 app.use("/api/hasil", hasilPerhitunganRoutes);
 
 const PORT = process.env.PORT || 4000;
